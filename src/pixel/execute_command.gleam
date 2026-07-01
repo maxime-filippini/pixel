@@ -75,7 +75,6 @@ pub fn build(
     path: "/sprites/" <> builder.sprite_name <> "/exec",
     query: query,
   )
-  |> echo
 }
 
 pub fn response(

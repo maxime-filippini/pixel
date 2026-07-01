@@ -76,7 +76,7 @@ pub fn build(
     []
     |> prepend_if_some(builder.prefix, fn(v) { #("prefix", v) })
     |> prepend_if_some(builder.continuation_token, fn(v) {
-      #("continuatin_token", v)
+      #("continuation_token", v)
     })
     |> prepend_if_some(builder.max_results, fn(v) {
       #("max_results", int.to_string(v.inner))

@@ -29,14 +29,14 @@ pub fn build(
 ) -> request.Request(BitArray) {
   let query = [
     #("path", builder.path),
-    #("workingDir", builder.path),
+    #("workingDir", builder.working_directory),
   ]
   internal.request(
     credentials:,
     method: http.Get,
     headers: [],
     body: <<>>,
-    path: "ur/sprites/" <> builder.sprite_name <> "/fs/read",
+    path: "/sprites/" <> builder.sprite_name <> "/fs/read",
     query: query,
   )
 }
